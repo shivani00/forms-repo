@@ -11,7 +11,7 @@ module.exports = {
         "versionalias": "v1",
         "versondescription": "",
         "criteria": {
-            "garagingState": "<usually undefined or else if its a single state then we can add the stateCd> ",
+            "garagingState": "MI, RI",
             "transactionProcess": "<undefined>",
             "minEntryDate": "<undefined>",
             "maxEntryDate": "<undefined>",
@@ -42,20 +42,20 @@ module.exports = {
                     isRuleFired = true;
                 }
                 if (isRuleFired) {
-                    createNewFormsListItemXX(data, "FRM 35480", "<form edition date usually XX XX for WC>", "MI/RI Controller Insurance", "add", <displayInd>, <manuscriptInd>, <printInd>, <pulllistInd>, "text", <applicableStateCd usually null>, <handlingTypecd usually null>, <occurrenceId usually null>,"<display Form nUmber>", "MI/RI Cntrl Ins", <localprintEligibleInd>, <documentCategoryCd usually null>, <documentTitleTxt usually null>, <processBehaviourCd usually null>)
+                    createNewFormsListItemXX(data, "FRM 35480", "<form edition date usually XX XX for WC>", "MI/RI Controller Insurance", "add", <displayInd>, <manuscriptInd>, <printInd>, <pulllistInd>, "text", null, null, null, "FRM 35480", "MI/RI Cntrl Ins", <localprintEligibleInd>, null, null, null);
                 }
             }
-        },
-        "notes":
-                        'Form Title:
-                        Form Type:
-                        Implemented:
-                        LOB-ReleaseDt-Story#-ID
-                        CIT:
-                        Initial Implementation:
-                        Conditions for the form to derive (Spydr rules)
-                        AS OF:
-                        Upates:',
-                        "tests":[]
-}]
+        }
+    },
+    "notes":
+    'Form Title:
+    Form Type:
+    Implemented:
+    LOB-ReleaseDt-Story#-ID
+    CIT:
+    Initial Implementation:
+    Conditions for the form to derive (Spydr rules)
+    AS OF:
+    Upates:',
+    "tests":[]
 }
