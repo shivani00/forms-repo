@@ -30,9 +30,13 @@ module.exports = {
             executeCondition()
             function executeCondition() {
                 var isRuleFired = false;
-                // Code Logic
+                if (
+                    hasCoverage(data, "MCDMI")
+                ) {
+                    isRuleFired = true;
+                }
                 if (isRuleFired) {
-                    createNewFormsListItemXX(data, "FRM 35480", "<form edition date usually XX XX for WC>", "MI/RI Controller Insurance", "add", <displayInd>, <manuscriptInd>, <printInd>, <pulllistInd>, "text", null, null, null, "<display Form nUmber>", "MI/RI Cntrl Ins", <localprintEligibleInd>, null, null, null)
+                    createNewFormsListItemXX(data, "FRM 35480", "XX XX", "MI/RI Controller Insurance", "add", undefined, undefined, undefined, undefined, "text", null, null, null, "FRM 35480", "MI/RI Cntrl Ins", undefined, null, null, null);
                 }
             }
         }
