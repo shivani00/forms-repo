@@ -30,14 +30,15 @@ module.exports = {
             executeCondition()
             function executeCondition() {
                 var isRuleFired = false;
-			Code Logic
+				// Code Logic - To have empoty checks on conditiona and then add conditions - states, coverages, effective dates etc.
+				
                 if (RuleFired) {
                     createNewFormsListItemXX(data, "<form number with space after every 2 characters>", "<form edition date usually XX XX for WC>", "<form title>", "<action default its add>", <displayInd>, <manuscriptInd>, <printInd>, <pulllistInd>, "<formtype>", <applicableStateCd usually null>, <handlingTypecd usually null>, <occurrenceId usually null>,"<display Form nUmber>", "<form shortname>", <localprintEligibleInd>, <documentCategoryCd usually null>, <documentTitleTxt usually null>, <processBehaviourCd usually null>)
 		}
 	}
 },
-                        "notes":
-                        'Form Title:
+                        "notes": `
+                        Form Title:
                         Form Type:
                         Implemented:
                         LOB-ReleaseDt-Story#-ID
@@ -45,7 +46,7 @@ module.exports = {
                         Initial Implementation:
                         Conditions for the form to derive (Spydr rules)
                         AS OF:
-                        Upates:',
+                        Upates:`,
                         "tests":[]
 }]
 }
