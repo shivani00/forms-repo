@@ -1,9 +1,9 @@
 module.exports = {
-    "id": "<uniqueid-aplhanumeric-with hyphen>",
-    "name": "<Form Number>",
+    "id": "<uniqueid-aplhanumeric-with hyphen (uuid - 32 character long, with 8 characters followed by hyphen)>",
+    "name": "<Rule Number>",
     "description": "<Form Title>",
     "ruleVersions": [{
-        "versionId": "<uniquevalue-onlyalphabets>",
+        "versionId": "<uniquevalue-onlyalphabets (v<32 random characters>)>",
         "versionalias": "v1",
         "versondescription": "",
         "criteria": {
