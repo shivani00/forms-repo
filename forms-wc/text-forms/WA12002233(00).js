@@ -1,9 +1,9 @@
 module.exports = {
     "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-    "name": "WA12002233(00)",
-    "description": "MI/RI Controlled Insurance Form",
+    "name": "WA12002233(00)-Test",
+    "description": "MI/RI Controlled Insurance",
     "ruleVersions": [{
-        "versionId": "vqwertyuiopasdfghjklzxcvbnm123456",
+        "versionId": "vabcdefghijklmnopqrstuvwxyzabcde",
         "versionalias": "v1",
         "versondescription": "",
         "criteria": {
@@ -30,33 +30,28 @@ module.exports = {
             executeCondition()
             function executeCondition() {
                 var isRuleFired = false;
-
-                if (
-                    hasCoverage(data, "MCDMI") &&
-                    (hasStateCd(data, "MI") || hasStateCd(data, "RI")) &&
-                    (
-                        data.effectiveDate && compareDates(data.effectiveDate, "2026-01-01")
-                    )
-                ) {
-                    isRuleFired = true;
+				
+                if (hasCoverage(data.policy.workCompCovPart.simpleCovPartCovList.coverageProvided, "MCDMI") && (hasStateCd(data, "MI") || hasStateCd(data, "RI"))) {
+                    if (compareDates(data.effectiveDate, "2027-01-01") >= 0) {
+                        isRuleFired = true;
+                    }
                 }
-
+				
                 if (isRuleFired) {
-                    createNewFormsListItemXX(data, "FRM 35480", "XX XX", "MI/RI Controlled Insurance Form", "add", true, false, true, true, "text", null, null, null, "FRM 35480", "MI/RI Cntrl Ins", true, null, null, null)
-                }
-            }
+                    createNewFormsListItemXX(data, "FR 35 480", "XX XX", "MI/RI Controlled Insurance", "add", true, true, true, true, "text", null, null, null, "FRM 35480", "MI/RI Cntrl Ins", true, null, null, null)
+		        }
+	        }
         },
         "notes": `
-                        Form Title: MI/RI Controlled Insurance Form
+                        Form Title: MI/RI Controlled Insurance
                         Form Type: text
-                        Implemented: Yes
+                        Implemented: 2026-01-01
                         LOB-ReleaseDt-Story#-ID: WC-2026-01-01-WA12002233(00)
                         CIT:
                         Initial Implementation: 2026-01-01
                         Conditions for the form to derive (Spydr rules)
                         AS OF: 2026-01-01
-                        Upates: Initial creation
-                        `,
-        "tests": []
+                        Upates:`,
+        "tests":[]
     }]
 }
